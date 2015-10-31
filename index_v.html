@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8" name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0"/>
+    <title>index</title>
+    <link href="layout.index.css" rel="stylesheet"/>
+    <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+    <!--<script src="js/embedpano.js"></script>-->
+    <!--<script type="text/javascript" charset="utf-8" src="js/Parallax_edgePreload.js"></script>-->
+    <style>
+        .edgeLoad-EDGE-115372601 { visibility:hidden; }
+        #page_4 .da{
+            width:150px;
+             height: 50px;
+            display: block;
+            position: absolute;
+         }
+        .shuiping{
+            left: 75px;
+            top: 408px;
+        }
+        .shuangyu{
+            top: 227px;
+            left: 131px;
+        }
+        .jinniu{
+            top: 117px;
+            left: 465px;
+        }
+        .shuangzi{
+            top: 142px;
+            left: 629px
+        }
+        .juxie{
+            top: 218px;
+            left: 743px;
+        }
+        .shizi{
+            top: 387px;
+            left: 870px;
+        }
+        .chunv{
+            top: 572px;
+            left: 847px;
+          }
+        .tianping{
+            top: 637px;
+            left: 768px;
+        }
+
+        .baiyang{
+            top: 149px;
+            left: 289px;
+        }
+        .tianxie{
+            top: 659px;
+            left: 538px;
+        }
+        .sheshou{
+            top: 650px;
+            left: 311px;
+        }
+        .mojie{
+            top: 543px;
+            left: 111px;
+        }
+        #xz-name.baiyang_quanj{
+            background-position: 0 0;
+        }
+        #xz-name.jinniu_quanj{
+            background-position: 0 -26px;
+        }
+        #xz-name.shuangzi_quanj{
+            background-position: 0 -50px;
+        }
+        #xz-name.juxie_quanj{
+             background-position: 0 -74px;
+         }
+        #xz-name.shizi_quanj{
+            background-position: 0 -99.5px;
+        }
+        #xz-name.chunv_quanj{
+            background-position: 0 -124px;
+        }
+        #xz-name.tianping_quanj{
+            background-position: 0 -149px;
+        }
+        #xz-name.tianxie_quanj{
+            background-position: 0 -174px;
+        }
+        #xz-name.sheshou_quanj{
+            background-position: 0 -198px;
+        }
+        #xz-name.mojie_quanj{
+            background-position: 0 -223px;
+        }
+        #xz-name.shuiping_quanj{
+            background-position: 0 -248px;
+        }
+        #xz-name.shuangyu_quanj{
+            background-position: 0 -273px;
+        }
+        ul#xzlabel{
+            position: absolute;
+            height: 100%;
+            width: 300px;
+            margin: 0;
+            left: 700px;
+            z-index: 300;
+        }
+        ul#xzlabel li{
+            background-image: url(img/xzpantext.png);
+            width:128px;
+            height: 32.5px;
+            background-size: 400% auto;
+            position:absolute;
+            list-style: none;
+        }
+        ul#xzlabel li:before{
+            content: '';
+            display: block;
+            width:16px;
+            height: 16px;background-color: blue;
+            position: relative;
+            left: -25px;
+            top: 7px;
+            border-radius: 8px;
+        }
+        ul#xzlabel li.shen:before{
+            height: 16px;background-color: #004380;
+        }
+        ul#xzlabel li.qian:before{
+            height: 16px;background-color: #2c95eb;
+        }
+        ul#xzlabel li.gengqian:before{
+            height: 16px;background-color: #7addfd;
+        }
+        ul#xzlabel li.active:before{background-color: #fff;}
+        ul#xzlabel li.baiyang_quanj{
+            background-position: -384px 0;
+            top: 18px;
+            left: 73px;
+        }
+        ul#xzlabel li.jinniu_quanj{
+            background-position: -384px -32.5px;
+            top: 71px;
+            left: 118px;
+        }
+        ul#xzlabel li.shuangzi_quanj{
+            background-position: -384px -65px;
+            top: 131px;
+            left: 155px;
+        }
+        ul#xzlabel li.juxie_quanj{
+            background-position: -256px -97.5px;
+            top: 197px;
+            left: 182px;
+        }
+        ul#xzlabel li.shizi_quanj{
+            background-position: -128px -130px;
+            top: 263px;
+            left: 200px;
+        }
+        ul#xzlabel li.chunv_quanj{
+            background-position: -128px -162.5px;
+            top: 332px;
+            left: 210px;
+        }
+        ul#xzlabel li.tianping_quanj{
+            background-position: -128px -195px;
+            top: 402px;
+            left: 213px;
+        }
+        ul#xzlabel li.tianxie_quanj{
+            background-position: -256px -227.5px;
+            top: 472px;
+            left: 200px;
+        }
+        ul#xzlabel li.sheshou_quanj{
+            background-position: -384px -260px;
+            top: 541px;
+            left: 182px;
+        }
+        ul#xzlabel li.mojie_quanj{
+            background-position: -384px -292.5px;
+            top: 604px;
+            left: 152px;
+        }
+        ul#xzlabel li.shuiping_quanj{
+            background-position: -384px -327px;
+            top: 663px;
+            left: 121px;
+        }
+        ul#xzlabel li.shuangyu_quanj{
+            background-position: -384px -357.5px;
+            top: 720px;
+            left: 73px;
+        }
+
+
+        ul#xzlabel li.baiyang_quanj.active{
+            background-position: 0 0;
+        }
+        ul#xzlabel li.jinniu_quanj.active{
+            background-position: 0 -32.5px;
+        }
+        ul#xzlabel li.shuangzi_quanj.active{
+            background-position: 0 -65px;
+        }
+        ul#xzlabel li.juxie_quanj.active{
+            background-position: 0 -97.5px;
+        }
+        ul#xzlabel li.shizi_quanj.active{
+            background-position: 0 -130px;
+        }
+        ul#xzlabel li.chunv_quanj.active{
+            background-position: 0 -162.5px;
+        }
+        ul#xzlabel li.tianping_quanj.active{
+            background-position: 0 -195px;
+        }
+        ul#xzlabel li.tianxie_quanj.active{
+            background-position: 0 -227.5px;
+        }
+        ul#xzlabel li.sheshou_quanj.active{
+            background-position: 0 -260px;
+        }
+        ul#xzlabel li.mojie_quanj.active{
+            background-position: 0 -292.5px;
+        }
+        ul#xzlabel li.shuiping_quanj.active{
+            background-position: 0 -325px;
+        }
+        ul#xzlabel li.shuangyu_quanj.active{
+            background-position: 0 -357.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--</div>-->
+
+    <!--<div id="page_2">-->
+        <!--<a class="forecast" ></a><div class="btn_light2 forecast"></div>-->
+        <!--<a class="calendar" ></a><div class="btn_light1 calendar"></div>-->
+
+        <!--&lt;!&ndash;<div class="light_three"></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="light_four"></div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="light_five"></div>&ndash;&gt;-->
+        <!--<div class="dotEight"></div><div class="dotEight"></div>-->
+        <!--<div class="dotNine"></div><div class="dotNine"></div>-->
+        <!--<div class="dotTen"></div><div class="dotTen"></div>-->
+
+
+         <!--<a id='back' href='navto://Horoscope_201412'></a>-->
+
+    <!--</div>&lt;!&ndash;page_2 end&ndash;&gt;-->
+
+
+    <div id="page_3">
+        <div class="dotOne"></div><div class="dotOne"></div>
+        <div class="dotTwo"></div><div class="dotTwo"></div>
+        <div class="dotThree"></div><div class="dotThree"></div>
+        <div class="dotFour"></div><div class="dotFour"></div><div class="dotFour"></div>
+        <div class="dotFive"></div><div class="dotFive"></div><div class="dotFive"></div>
+        <div class="dotSix"></div><div class="dotSix"></div>
+        <div class="dotSeven"></div><div class="dotSeven"></div>
+
+        <div id="container">
+
+            <a class="card_a"><img src="img/mojie.png" alt="mojie"/></a>
+            <a class="card_b"><img src="img/shuiping.png" /></a>
+            <a class="card_c"><img src="img/shuangyu.png"/></a>
+            <a class="card_d"><img src="img/chunv.png"/></a>
+            <a class="card_e"><img src="img/tiancheng.png"/></a>
+            <a class="card_f"><img src="img/tianxie.png"/></a>
+            <a class="card_g"><img src="img/sheshou.png"/></a>
+            <a class="card_h"><img src="img/jinniu.png" class="jn" /><!--<img src="img/jinniu_title.png" class="jn_title"/>--></a>
+            <a class="card_i"><img src="img/shuangzi.png" class="shuangzi" /><!--<img src="img/shuangzi_title.png" id="shuangzi_title"/>--></a>
+            <a class="card_j"><img src="img/juxie.png"/></a>
+            <a class="card_k"><img src="img/shizi.png"/></a>
+            <a class="card_l"><img src="img/baiyang.png"/><!--<img src="img/baiyang_title.png" />--></a>
+
+        </div>
+
+        <a id="home"></a>
+    </div>
+
+
+    <div id="detail_page">
+        <img id="xz_page" src="img/shuangzi.jpg" width="768" height="1024" />
+        <img id="close_page" src="img/back.png" width="22" />
+
+    </div><!--xingzuo页面-->
+
+
+    <!--&lt;!&ndash;全景图start&ndash;&gt;-->
+    <!--<div id="page_4" style="width:768px;height:1024px;">-->
+        <!--<div class="3d" style="-webkit-transform:rotate(90deg)">-->
+            <!--<div id="Stage" class="EDGE-115372601">-->
+            <!--</div>-->
+
+        <!--</div>-->
+        <!--<div id="containerPano" style="-webkit-transform:rotate(90deg); width:0;height:0; position: relative; top: -966px;left: -129px;z-index: 11;display: none">-->
+            <!--<span id="xz-name" class="" style="position: absolute;-->
+<!--top: 103px;-->
+<!--z-index: 220;-->
+<!--left: 271px;-->
+<!--color: rgb(0, 0, 0);-->
+<!--font-style: italic;-->
+<!--font-weight: bold;-->
+<!--font-size: 20px;-->
+<!--display: inline-block;-->
+<!--width: 466px;-->
+<!--text-align: right;-->
+<!--width: 182px;-->
+<!--height: 23px;-->
+<!--background-image: url(img/xztitlebg.png);-->
+<!--background-size: 100% auto;-->
+<!--"></span>-->
+            <!--<div id="yugaotext" style="width: 368px;line-height:24px; height: 475px; position: absolute; top: 125px; left: 198px; box-sizing:border-box; z-index: 240; color: #fff; overflow-y: scroll; font-size: 17px; margin: 20px 0;"></div>-->
+
+            <!--<span id="ssname" style="-->
+    <!--position: absolute;-->
+    <!--top: 91px;-->
+    <!--z-index: 230;-->
+    <!--color: yellow;-->
+    <!--left: 665px;-->
+    <!--font-size: 19px;-->
+    <!--font-style: italic;-->
+    <!--width: 338px;-->
+    <!--text-align: right;-->
+<!--"></span>-->
+
+            <!--<div id="shangsheng" style="width: 356px;height: 591px;position: absolute;z-index: 210;left: 660px;top: 44px;background-image: url(img/shangshengbg.png);background-size:100% 100%;box-sizing: border-box;display: none;box-shadow: 2px 2px 10px #000;">-->
+                <!--<div id="ssText" style="margin-top: 77px;padding: 7px;overflow-y: scroll; height: 495px;">-->
+
+                <!--</div>-->
+            <!--</div>-->
+
+
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--<div class="bg" id="bg1" style="position: absolute;z-index: 95;top: 0px;left: 70px;"></div>-->
+            <!--&lt;!&ndash;<div class="bg" id="bg2" style="/* -webkit-transform:rotate(0deg) */"></div>&ndash;&gt;-->
+            <!--<div id="zhuanpan" style="height: 768px; width: 1024px; opacity: 1;z-index: 200;"></div>-->
+
+            <!--<img id="xingpan" src="img/pan.png" style="position: absolute; width: 835px; left: -6px; top:0px; z-index: 200; -webkit-transform-origin:384px 384px; -webkit-transform:rotate(0deg)">-->
+            <!--<ul id="xzlabel">-->
+                <!--<li class="baiyang_quanj shen" id="baiyang_quanj"></li>-->
+                <!--<li class="jinniu_quanj shen" id="jinniu_quanj"></li>-->
+                <!--<li class="shuangzi_quanj shen" id="shuangzi_quanj"></li>-->
+                <!--<li class="juxie_quanj qian" id="juxie_quanj"></li>-->
+                <!--<li class="shizi_quanj gengqian" id="shizi_quanj"></li>-->
+                <!--<li class="chunv_quanj gengqian" id="chunv_quanj"></li>-->
+                <!--<li class="tianping_quanj gengqian" id="tianping_quanj"></li>-->
+                <!--<li class="tianxie_quanj qian" id="tianxie_quanj"></li>-->
+                <!--<li class="sheshou_quanj shen" id="sheshou_quanj"></li>-->
+                <!--<li class="mojie_quanj shen" id="mojie_quanj"></li>-->
+                <!--<li class="shuiping_quanj shen" id="shuiping_quanj"></li>-->
+                <!--<li class="shuangyu_quanj shen" id="shuangyu_quanj"></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<img id="close_quanj" src="img/back.png" style="-->
+    <!--z-index: 300;-->
+    <!--position: absolute;-->
+    <!--left: 67px;-->
+    <!--bottom: 24px;-->
+    <!--width: 34px;-->
+    <!--height:34px;-->
+        <!---webkit-transform:rotate(90deg);-->
+
+<!--">-->
+    <!--</div>-->
+    <!--&lt;!&ndash;全景图end&ndash;&gt;-->
+
+    <script>
+    //全景图JS开始
+    var startX = 0, initAngle = 0, xzArr = ['shuangyu_quanj', 'shuiping_quanj', 'mojie_quanj', 'sheshou_quanj', 'tianxie_quanj', 'tianping_quanj', 'chunv_quanj', 'shizi_quanj', 'juxie_quanj', 'shuangzi_quanj', 'jinniu_quanj', 'baiyang_quanj'],
+            angArr = [48, 40, 32, 24, 16, 8, 0, -8, -16, -24, -32, -40],
+//            angArr = [-40, -32, -24, -16, 8, 0, 8, 16, 24, 32, 40, 48],
+            zhuan=false;
+    var text = {
+        baiyang_quanj: '可能最终成为你最美好的月份。十二月将充满甜蜜氛围。提早准备好你的节日盛装吧，因为你将会频繁出行。这个月将分为两部分。感谢12月6日丰富的满月，第一部分将是你打包行李准备出发， 要么去机场，要么在车上或者在坐火车，你的心情也因为即将来临的假期雀跃不已。加之你的主导行星——火星将会在12月4日进驻善于社交的水瓶座，使得你渴望与朋友聚会，安排酒会，聚餐，购物行程以及参与你能安排到的最多的节日聚会。这将是个非比寻常的月份——这个月可能最终成为你最美好的月份，一生当中最美好的。在白羊座位置上的天王星和在狮子座的木星将会给你带来一连串的快乐惊喜。你将有机会邂逅浪漫对象哦，几率比最近一阵子的其他任何时候都大。所以不管你现在是单身还是已有对象，你将会非常享受地庆祝这个年末，也有可能找到相爱的人，或者如果已有对象了，会从你的爱人那里得到爱的承诺哦。你将需要在你的日历上划出几个尤其特殊的日期：12月4日，桃花运极旺盛的一天； 12月5日，简直是为各类惊喜量身定制的； 12月12日，旅行的理想日期； 12月13-14日，盈盈爱意将在空中弥漫开来，而且如果你想显示你对于节日娱乐的高端时尚品位，你会非常具有创造力的。12月21日的新月可能会给你带来来自圣诞老人的有可能最好的礼物——一个人人垂涎的新岗位或者晋升机会。你的第十荣誉、奖励、成就和名誉宫将会有五大天体（不信自己数数！），包括如下几个：太阳，象征着你将展现权威和领导才能；新月，为你开启机会之门；水星，完善你的表达才能；金星，提升你在VIP人际圈中的受欢迎度；冥王星，预示着你将与高端人士会面。这些之所以将要发生是因为这一年已接近尾声了，但是不要误会：你需要保持手机电量充足，也要随身携带电脑。你似乎在11月份一直忙着推动某个计划，而且你的努力似乎已在花园播下种子，现在也是开花时节了。如果最近你一直都没怎么忙于工作，这轮新月将会影响力强烈地帮助你，而且我感觉不管怎样你都会看到事态有所进展的。有了木星形成的优美角度，如果你从事创意性工作或者协助创意性员工工作，在休息之前你将需要大展拳脚一番的。一项警示：12月14日将带来冥王星和天王星之间的罕见争议，从而引起某位VIP人物对你处理新工作能力的怀疑。你的任务就是向这位高层人士证明你绝对够格。每个机构组织里面总会有个人怀疑这怀疑那的。你可以通过列示你所做出的成就以及展示你为什么能够妥善处理好新工作来变被动为主动。新月将开启一扇重要之门——这扇门上也有你的名字。',
+        jinniu_quanj: '创收能力强的一月。今年是没有水星在你重要的节日购物期间逆行的少有的几年之一，所以极有可能你给家人和朋友挑选的礼物会火爆全场。你可能在十一月份已经采购了相当一部分，因为到12月6日的满月，你将需要签付一笔大额支票，不出意外的话是支付给信用卡公司的。但是完全没必要因此担忧，因为这一整月你的创收能力也非常强。如果你需要出售或者购买房屋，公寓或小居室，你会在满月日达成交易的，而且你很可能对得到的结果感到满意。记得及时还清所有账单，因为土星会在月末进驻你的信用领域和他人钱财宫。当12月4日你的第十二直觉宫和你的第八转变宫连接太阳和天王星，你可能感觉自己有异常强烈的灵力。选择听从你内心的小声音吧！自从火星出现在水瓶座之后，你的事业运似乎就开始蒸蒸日上，所以不管你多么忙地享受着假期，多多润色你的简历，如果够有创意的话，也可以调整你的投资组合。到一月末二月初，你就会发现你的一番功夫会得到应有的回报的。同时，也要多多探究，看看哪些领域是比较适合你下苦功夫深入研究，从而提升自己。事实证明以下领域是回报率较高的：生物、科学和社会服务学；人道主义，不是以利益和筹集慈善款，获取地位为目的；所有与数码相关的包括（但也不仅限于）以下形式的媒体：广播、电视和互联网，这些领域都可以为你创造绝佳机会。12月21日之后，新月出现在友善的魔羯座，届时你的旅行宫将熠熠闪耀着光芒和能量。出发去一个令人兴奋的，极具异域风情的地方来迎来新年的时刻到了，可能是去山区滑雪或者欣赏山川风光。月亮将在金牛座，预示着这将是一次愉快的庆祝。或者你还是比较中意城市风光？你可能会以在埃菲尔铁塔的顶端细细品味香槟的具有纪念意义的方式开启2015年度呢！如果你正在和伴侣正式交往，那自从2012年10月土星这个掌管一切的行星进驻到你的对立星象天蝎座后，它就没让你有过好日子。这期间，你可能一直在某段重要的恋爱关系或者商业关系中挣扎。好消息就是土星将会在2012年12月23日离开天蝎座，这是值得庆祝的原因！之后土星只是从2015年6月14日到9月17日期间在天蝎座短暂逆行13周，之后它会妥妥地进驻到射手座并一直待到2017年12月20日。我很怀疑那短短的十三周会对你和搭档的关系产生任何新的影响。很明显到年末时，你们之间的关系要么得到了重要巩固和提升，要么就是放弃之后离开。不管结果如何，一旦你进入2015年，你将有一幅全新的图景来规划你的梦想。',
+        shuangzi_quanj: '期待一场有意外收获的旅行。许多双子们将会在十二月积极参与到节日活动中去，这得感谢12月6日出现在双子座的新月，与太阳一起搭档守护在你的承诺宫。与此同时，一个代表纯粹和谐的闪耀黄金铁三角将会出现在空中，所有的都是出现在具包容性的火象星座，连接了在狮子座的木星——礼物的给予者，现在在你的旅行和沟通宫；太阳和你的主导者——在射手座的水星，守护在你的承诺宫；以及在白羊座的天王星——惊喜之星，守护在你的友谊宫；每一个都与彼此间形成了可能是最友善的角度。你生活的所有这些领域都会彼此配合为你创造一个美好的假期，充满爱情、友情和可能的旅途之乐。你可以去近的地方，也可以远一点，而且火星会一切都以你的愿望为标准的。主张爱自己多一点的金星将会滑进你的承诺宫待到12月9日，从而使得这段日子意义非凡。上个月可能是对你来说比较奢侈的月份，这是因为有火星途经你的信用宫。值得高兴的是，火星将会离开给你带来困扰的星象——摩羯座，从而给你带来更稳定的财务前景。加之有格外友善的新月，12月21日会给你带来丰厚的年终福利，正好可以用来支付假期信用卡消费，当然也有钱财结余的。年终税务规划也会付清，所以如果你的会计还没离开你所在的城镇，缠着她给你在年末前制订一个计划出来。教师之星——土星自从2012年10月以来就一直在天蝎座，一直以来也给双子们带来了各种各样的健康问题。现在，12月23日，土星将会撤离并进驻到射手座，这应该会给你带来解脱。土星将会从2015年6月14日到9月17日期间短暂地再次进驻天蝎座，到那时没可能土星会在这短短的十三周里再兴风作浪。有可能你的医生建议你做手术，很有可能你会在年底前安排做必要的手术。许多人都会发现在年底的日子里，当整个世界都开始平息下来，年底的日子也是做手术的恰当时机，因为可以趁节日利用私人时光恢复身体健康。有了五大行星守护在你的手术宫，你将会迅速行动完成这个一直困扰你的事情，之后以最佳状态进入新的年度。不要在12月15日这天借钱给任何朋友，这天 冥王星将会与天王星形成激烈的不友好对抗。不管这个阵仗如何上演，不管朋友给你施加多大的压力，你要清楚地知道你一旦心软，这笔钱就算是有借无还了。如果打算在节假日出游，你规划的前景是一片光明的。但是，尽量避免在12月24日这天在旅途路上逗留，因为这天你的主导者以及旅程之星将会与代表意外结果的行星——天王星相碰撞。同样是在这天，如果和朋友以及家人相聚的话，要多加注意你的言辞可能会涉及某些隐私问题，某些人可能会很容易被冒犯到。你无意中提出的问题可能会引起对方受伤的情绪，从而引起情绪低落。所以还是多注意言辞。你最喜欢的周末将是12月12日，这天水星将会与木星保持一致，使得旅行、写作和演讲——可能是对某个团体，都比较愉快。第二天，即12月13日，可能会带来伴侣对你所说的令你脸红心跳的甜言蜜语。这个月你有许多快乐点，当你最终迎来了新年之夜，一些私人又令人舒适的话语正好很应景。',
+        juxie_quanj: '是时候卸下社交包袱。保持身体强健，因为一直以来你都马不停蹄地忙。12月5日的新月将会出现在你最私人的领域，这预示着你将想要和几个要好朋友以及家人在节日时光小聚一下。除了勉强自己在这个月的前三周去参加每一场你被邀请到的聚会，还不如挑选几场你觉得最有意义的聚会参加。卸下你身上的社交包袱来保存体力也没什么坏处。火星将会在12月4日到1月12日期间较大地提高你的个人支出。你似乎打算今年送出大方点的礼物，但是你也要知道即使你送的礼物没那么贵，家人和朋友也一样会喜欢的。接下来你可能有大额开销，所以在你清楚你的现金流之前，可能需要更保守一些。 在享受节日假期的大背景下，你将会很庆幸能看到自己在事业方面有稳定的突破。告知你在工作方面表现得很好的第一个提示将会出现在12月4日，你在某个任务上的表现将会给你带来意外的嘉奖和比预期更好的结果。你的客户和公司的管理层都会对你刮目相看的。12月12日你掌控大额费用的能力将会大大施展，而且可能有一笔大额奖金在12月19-20日来临。暂时成功了并不就意味着从此以后你的事业生涯就一帆风顺了。你将成为竞争对手们争相追逐的目标，但是你会学会如何应对他们的。当这个月接近尾声、假日来临之际，12月21日的新月将会为你和生命中的最爱之间创造一股特殊的亲密氛围。在天蝎座的土星在你和爱人之间创造了一种疏离感，这不是你的错。你们可能正在维系一段远距离关系，或者你的另一半一直都在其他城市工作，或者说另一半需要长时间工作无暇顾及你，就像医学系的学生那样，或者跟诸如此类的很多其他情侣一样。现在有了土星的移动，这个考验我们的决心和意志力的行星将会搬离你的爱情宫，而之前阻隔在你们之间的距离也会随之消散。2015年6月14到9 月17日期间土星会再次拜访短短几周，但是自那之后，土星会在接下来的29年里消失得无影无踪，而你们也不用为在一起而漫长地等待着。如果你还未婚，12月的最后一周可能会为你创造一枚钻石和一场感人肺腑的承诺。爱情之星金星将会在你的感情宫。加之十个里面就有五个天体守护在你重要的另一半领域，你的眼中也只会有你的伴侣。是时候与爱人一起梦想和制定重要的人生规划了。',
+        shizi_quanj: '花时间多陪陪另一半。结识新朋友，可能参与到新的慈善活动中，以及许多其他的节日活动将让你能尽情享受到这个节假日。你将与许多人擦肩而过，他们之中有些是已经认识的老朋友，也有一些新面孔，有些想要和你深交。有了12月6日出现在双子座的满月，与朋友的交谈会进行得如火如荼，彼此之间也会以令人兴奋的方式互相分享很多信息。做好心理准备会在12月初因为参加各类活动而需要熬夜。狮子座们都喜欢穿上设计师设计的服装盛装出席，这个节日季，你将有许多理由这么做。你参加的聚会也会很奢华的，当然费用也所剩无几了。如果你已有对象了，你将有更多的时间陪陪对象了，最近几个月因为你要去关注其他事情，对方感觉受了冷落。目前在旅行宫的天王星是惊喜之星，也会为这个月增添色彩的。你可能会在这个激动的时刻飞往某个令人兴奋的城市或者天堂岛，尤其是在12月4-7日附近或者接下来的12月12-14日（12月13日将超级适合你，因为太阳将与木星相遇），或者在某个你觉得最开心的其他周末也可以，比如12月20-21日。 尽量不要在12月24日出行，这天水星（代表旅行）和天王星（代表意外事件）将会形成对抗。虽然于你来说这看起来不可能，12月21日之后正当你以为没人工作的时候，将会有一份美差奖赏给你。很多人都会在工作，如果能联系到你的话，新任务将会是为你量身定制的。这轮新月带来了来自木星的协助，而且一旦木星插手，丰厚的报酬就离你不远了。天王星也会非常友好。预示着新项目将会给你许多表达自己的创意性的空间。在爱情方面，你可能推动你的行程表向爱人承诺了，这得感谢天王星在12月21日的移动，它是你的伴侣、婚姻宫的主导者。外面的局势可能发生变化，现在你可能感觉没有理由再等着去订婚。火星将会在2014年12月1日到2015年1月12日期间途经你的同一伴侣、婚姻、承诺宫。土星将会在12月23日进驻你的爱情宫——射手座，这也是自1985到1988年以来的第一次。说到爱情，你们也准备好定下来了，也有可能考虑要个小孩。还是单身？12月1日到12月9日期间，你还有金星守护在同为火象星座的射手座，这是有利于你的爱情和外貌的加分项，这是你寻找爱情的绝佳时机。当金星出现在射手座，也是你向你最喜欢的造型师咨询如何设计一款新型假日造型的理想时机，记得也要选择一款新的夜间妆容哦。',
+        chunv_quanj: '桃花旺盛的一月。记得在十二月的第一周穿上你最喜欢的通勤装并尽量让自己看起来具有权威性，因为在12月6日这个满月日，所有的目光将会集聚在你身上。那轮新月将会点亮你的第十荣誉、奖赏。成就和名誉宫，这也是能做到这一点的2014年度唯一的一轮月亮。可能会突然得到消息，完全如惊喜般，你不仅会喜欢上这种责任以及能充分发挥你才能的这种感觉，你得到的补偿也可能是非常丰厚的。火星将会让你集聚在这项任务上，因为当12月4日这轮红色行星进驻到水瓶座之时，火星将会进入你的任务中心。你会在年末的假日期间工作在一个对于产品和服务具有最高要求的领域。不管怎样，你会很激动，因为许多事情都需要仰仗你才能最终满足他们渴望欢度假日的心愿。你可能一直在储存积蓄想买一套房屋或公寓，或者想把你现有的居室重新装修一番。土星将会在12月23日进驻你的房屋宫，这是自从1985-到1988年待了三年之后的第一次。这个代表自律和勤奋的行星让我们准备好了去实现之前无法企及的大目标。尽管土星在教会你如何掌控新行动之时从来不会发出任何奖励，只要坚持前进，当你的勤奋努力达到了土星的要求，你也会因为你的努力而获得某些令人刮目相看又长久的效果。从这个月开始，即2014年12月23日到2017年12月20日，土星将会一直守护你。你将会有短暂的一段时间。只有一段时间，土星会逆行到天蝎座，即2015年6月17日到2015年9月17日。之后土星会在接下来三年的大部分时光里教导你与房屋和家庭相关的目标。这个月你的爱情运势和桃花运简直是旺，这得感谢12月21日在摩羯座的格外友善的新月。至少五个天体将会挤在你的爱情宫，包括金星、水星、冥王星、太阳和新月。这真是精彩得难以想象，十个里面就有五个天体守护在你的爱情宫。如果你还单身，所有你参加的聚会上你都会显得光彩夺目的，你可能会结识到新朋友。如果已有对象了，你和伴侣之间也会比一年里任何其他时光享受到的乐趣更多。金星将会在12月10日到1月12日期间进入到超级和谐的摩羯座和你的最浪漫宫。12月末也是几年来你看到过的关于爱情的最容易碰撞出火花的时机。你需要一轮新月让这些行星迅速进入行动状态，12月21日你将获得这轮新月。你的新年之夜应该是神圣美妙的。月亮将会在和谐的金牛座，而且所有的摩羯座行星将会扮演成小小的女性朋友，她们唯一希望的就是你能快乐。',
+        tianping_quanj: '家是本月所有活动的中心。长期以来你可能一直都因为不能显著提升收入而沮丧不已。现在这一情况将会得以改变，因为引起这一切的罪魁祸首——土星最终离开了你的第二工资宫。自从2012年以来土星就带着教导你学会珍惜已有钱财的任务，通过激励你更多地去讨价还价来帮助你挣到更多钱财。至于土星对你的财务教导课程何时结束则完全取决于你本人。土星将会逆行回天蝎座，这个拉紧了你的钱包这根弦的地方，但是放心，它只会停留十三周，从2015年6月14日到9月17日，所以不会长到足以产生任何隐忧。现在开始应该有更多的钱财流入哦。你已经付清了应该支付的款项，而且现在你的财务处理能力也更灵敏，更强大，你也有更强大的能力承受人生的沧桑和挫折。你学到关于钱财的所有知识将会在接下来的三年里，也就是土星能够回归帮助重新认识你的宇宙系统的日子里，带你继续前行。某个项目将要在12月6日的满月日完成，而你也需要努力赶在截止日前完工。你能够完成的，如果你有团队的话，大家都会团结一致的。满月日是总能把为了共同的事业而努力奋斗的许多人汇聚在一起的好时机。加之天王星和木星又如此友好，结果会比你预期的好很多，也会为你赢得称赞的。朋友们将会显示出他们黄金般的价值，这个月有好几方面都可以证明这一点。首先要留意的是12月12-13日的这个周末，当礼物和幸运的给予者木星给整个太阳系的中心和力量的赋予者太阳发出信号的时候，这是个你能清楚地看到朋友们是如何地全心全意信任你并希望你能参与到他们的节日中去的周末。月末，你的房屋将会是所有活动的中心。虽然某些天秤座们正投入在他们的搬家或装修过程中，但考虑到一年中的这个时间点，你肯定倾向于把主要精力放在家里和朋友以及家人玩乐。12月21日的新月将会出现在你的房屋和家庭宫，并充满了能量和幸运。你可以在家实现任何你全心投入的事情，或者为父母一方谋福利，因为至少有五个天体，包括太阳、新月、金星、水星和冥王星将挤在你的这一领域帮助你闪闪发光。你可能计划在新年搬家或者修整现有居所，如果是这样，这个月你的大脑将会冒出源源不断的创意性点子。许多店铺都有打折家具，织物以及其他你可能需要的饰物，所以你可能在节后买到某个称心如意的折价品。还有更多的好消息哦！在12月4日到1月12日，火星将会途经你的爱情、桃花运、聚会、休闲活动、怀孕、生产相关事务以及与孩子们共享天伦之乐的第五宫。从12月4日一直待到1月12日，使得这个假日季值得五星好评。你将会在12月20日当天以及前后一天内感受到火星的力量，因为这将是爱情的火花肆意绽放着意外乐趣的一天，而你也会开心得眩晕的。',
+        tianxie_quanj: '出行将会点亮爱情之火。你被公认为是十二星座里在财务方面最精明的星象之一，所以能看到你在一年中的这个时候做重要的税务规划是很不寻常的。你将会被12月6日的满月激励去做这件事。这是一轮精彩的满月，充满了幸运和意外奖金，因为木星和天王星都会共同协作来帮助你重整旗鼓。你也能最终搞定账务，重新思考你的经常性财务负担并总体上整理好你的年末财务。你也会关注你的房屋，12月4-6日，以及12月20-21日的那个周末会有关于房产和家庭相关的意外好消息。（尽管你没多大可能会在12月24日进行商讨）如果你有机会，不要推迟会面，因为水星将会与天王星形成硬角，从而使得重要文件的签署形成两败俱伤的局面，甚至也会给出行带来困难。火星在12月4日进驻你的房屋和家庭宫预示着你将要去父母家或者他们会来看你。你的房屋里似乎有噪音——是不是因为你为了把家具摆放得更好看而突然想要挪家具呢？还是这仅仅只是简单地意味着你很乐意接待许多来访者？这些猜测也不是互相排斥的，所以可能两种情形兼有，供你享受以及汲取经验。天王星，这个一有消息就如闪电般迅速的现代之星，从7月21日开始就逆行了，但是会迅速变化的。当假日一天天临近，你似乎已经打包好行李准备出发了。将会有五个友善的天体出现在你的短途旅行宫，所以你无法抗拒地渴望能出门走走。出现在你爱情宫（第五宫）的海王星将会向太阳、新月和水星发出美丽的信息，预示着你将会从遇到的人那里获得灵感，并会通过简单的场景变换就简单地释放出来。在浪漫运势方面，出行将会点亮爱情之火，甚至是在某个迷人小床上共度一夜，共享早餐也会给一段正交往的恋情带来新激情，或者甚至可能帮你找到新恋情。这些行星们聚集在一起的第三宫会发现你对某个兄弟姐妹有愧疚心理，所以你可能跟姐妹或者兄弟做些特殊的事情。你们可能一起为父母计划了一场惊喜，或者决定在来年一起创业。至少是检查搜寻一下与兄弟姐妹相关的消息。第三宫同时也主导写作和合同。半个太阳系都挤进了你的第三宫，也有可能随着一年接近尾声，你正在努力赶某项写作任务。若是某项创意性项目而不是基于事实的记录性文件，你将会从海王星那里获得源源不断的灵感， 从而鼓励你从第五艺术表达宫攫取原创性和创意性。你可以完成很多事情，所以当你正在努力，继续加油。至于合同，你可能被催促赶紧签署。要确保你先把文件给律师过目一下，因为土星（ 经验学习和处在摩羯座的五大行星中的主导者）将会与木星形成硬角，可能会降低利润。为了照顾到律师的担忧，可能需要调整合同条款。谈到签署合同，永远不要让任何人催促你。水星不在逆行状态，所以你可以签署，但是前提是得到你的律师的首肯。',
+        sheshou_quanj: '可能实现从未实现过的目标。这将是里程碑式的月份。12月23日，土星将是自1985-1988年以来首次进驻你的星象。你将被鼓舞去选择定一个大目标，因为一旦土星靠近，你就会突然想做出长远打算来为未来打下坚实基础。土星将会守护你将近三年，虽然土星将会在2015年6月14日到9月17日期间进行它唯一的一次逆行，逆行回天蝎座。这将给你休息和放松的机会，到那时不会阻止到你前进。土星将帮助你实现你从来都觉得无法实现的目标，这样也帮助你建立安全感。在浪漫运势方面，12月6日的满月将会引发你对最亲密关系的冥想，前提是如果你恋爱了的话；如果你还没有对象，则是对商业关系。射手座被称之为“光棍”星象，因为通常你都不喜欢被拴在某段固定的承诺里。当然，几乎每个人的人生中都有一段时光觉得没法跟心爱的人在一起远比跟心爱的人在一起更痛苦。说到沟通和出双入对，没有哪个日子可以打败12月6日这个美妙的满月日。这个周末结束之后许多射手座都会炫耀自己的大钻戒。一周之后的12月12-13日，木星是你的主导者，在这些日子里，木星将会非常活跃，尽情地向你挥洒和灌注幸福和积极向上的情怀。12月21日的新月以及接下来的几天里，你可能缠着你的财务咨询师对你的退休投资组合进行任何必要的修正。在2014年结束之际也要格外注意支票的签署，如果你打算向慈善机构捐钱的话，这将是可以行动的月份。你被公认为是旅行星象，所以一想到可以打破常规生活，有机会去到某个新鲜的地方，总是给你一个令人兴奋又诱人的画面。这一整个月，从12月4日火星划过水瓶座开始，它就会点亮你附近旅游的领域。你不是因为要出差而出行，这些旅行纯粹是为了放松和玩乐，去见见朋友，你的姐妹或者兄弟，或者是跟你重要的另一半一起共度美好时光。12月4日带来了天王星（意外之星）与在射手座的太阳间形成的完美角度。如果正在约会，你的最爱可能建议一起去某个极度浪漫的地方，而且那个周末你们就可以出发了。如果还单身，这天将是邂逅某个新奇又有趣的朋友的理想时机。12月6日的满月也会很浪漫，而且还会将你的情绪煽动到最高点。算你幸运，这个月你可是有不少浪漫的日子。你被木星主导，所以12月12-13日期间，你将会享受到一缕奢华。在12月20-21日的这个周末你可能顺其自然地就旅行了，当机会来临，它好得简直是不容错过。过渡性的月亮也会在射手座，所以你可能会因为这个周末所发生的事情而兴奋不已。',
+        mojie_quanj: '做好被广泛关注的准备工作。十二月的第二部分肯定代表着某个重要转折点。12月21日的新月将会带来在摩羯座的五大行星，而且你将拥有以前只敢想象的掌控事务的能力。许多人将1月1日看做是新年的第一天，但实际上数学理论觉得12月21日才是。制定好你的决议并在12月21日之后宣布出来，在你星象的那群行星们会帮你得到出人意料的成功。你将渴望拥有节日的欢乐，你也会得到的，但是首先你需要在12月6日完成某个重要项目，不要让它碍事。有了木星（代表好运）和天王星以迷人的方式共同合作，你会因为你的工作得到丰厚的回报，或者因为你的良好表现而为自己赢得加薪机会。钱财会在这个月到手的，有了火星途经你的收入宫，你将会有大笔花销。你可能说十二月份谁都有过高的开支，但实际上你的水平似乎比平常高太多。你可能正考虑购置房屋，或者考虑装修房屋，这也解释了为什么这期间你的花销大。这个月空中会出现黄金铁三角，连接出现在你的他人钱财宫的木星（代表好运），出现在你的房屋宫的天王星（代表瞬间突破），和出现在你的幕后点子宫的金星（代表幸福快乐）。如果你想找公寓或者房屋，记得保持手机电量充足，不然的话其他人可就抓住机会捷足先登了。日月食最近落在你的房屋宫，预示着你需要找到关于房屋的解决方案或者多加关心父母。出乎你的意料，这个月这些都可能会发生。如果你在观望新的工作岗位，你会开始惊叹不已的。黄金铁三角将会帮助你向高层权贵人士证明你有做好这份工作的能力。在摩羯座的五个行星也会在这个月给你优势，有了金星在摩羯座，你将向与你会面的那些人展现魅力，他们将希望你能进他们的团队。12月21日出现在摩羯座的新月象征着你将开启一轮全新的循环，还是激动人心的一轮！在12月21日出现在摩羯座的新月日之后开始播撒种子，当你播种时，也要认真挑选。那些种子有足够能量长得庞大，就像魔豆里面的杰克一样。五个天体——太阳、新月、金星、水星和冥王星同时出现在一个星象是非常罕见的场面，所以趁现在你正有这个优势，赶紧充分利用起来吧。在浪漫运势方面，代表爱情和美貌的行星金星将会自2014年12月10日到2015年1月3日划过摩羯座，正好赶上了点亮你的假期的好时机。赶紧搜索网页去淘晚装，并去发型师那里设计一个适合晚上的令人焕然一新的新发型。你会引起广泛关注的，第一步就是结识新朋友。不管是已有对象还是单身的，一定要为新年夜计划些非常浪漫的活动。月亮将会在魔幻般和谐的金牛座。可以肯定地说，你一定会爱上在外面聚会的时光的。',
+        shuiping_quanj: '压力大大降低的一个月。自从土星在2012年10月进驻天蝎座，你的工作就一直在考验着你对它的耐性。土星是要求要么全心投入，要么不行动的任务主导者之星，所以过去两年简直是压力山大。你需要证明你是有远见的，而且要证明一直以来你都显示出了权威性和领导军队的作风。你进入的领域对你来说是全新的，所以你需要劳心费神才能达到新标准。这些你都做到了，而且更多，所以当土星终于在这个月离开了天蝎座，你也可以长舒一口气了。土星将会在2015年6月14日到2015年9月17日期间逆行回天蝎座，但是这十三周在来年夏天结束之后，你就接受完了土星对你的高强度训练。也许土星在教导你的时候从未给你带来任何嘉奖，但是只要土星继续前行，你可能会在2015年4月末获得奖赏，但也有可能要你等到2015年11月中才行。你正处于一个分水岭。现在你可以享受你已经投入的辛勤劳动了，并为你所成就的感到自豪。在接下来的几周甚至几个月里你会感受到压力大大降低了，如果你一直有个严厉的老板监督催促你，你会发现那个人有所收敛，你已经证明了你的能力。还有另一个现象证明你正开启新篇章。能量之星火星将会在12月4日到1月12日期间进驻水瓶座，给你冷静处理和掌控事务的能力。这是至关重要的阶段，而且为了让它对你有效，你需要清楚接下来你希望发生什么并逐步采取行动让它发生。你的主导者-天王星，将会处于开心又幸运的心境，给你带来了可以旅行的意外机会。注意这些星标日：12月4日，太阳和天王星将会形成美妙的角度，从而为你带来一段意外之旅或者信息。另外，也要注意12月5日，这天水星将会与天王星合力发作，你可能会得到一笔不小的钱财。出现在双子座的12月6日的满月日将会令你开心。点亮了你的浪漫宫，你应该会发现这一天是一年中最柔和的一天。天王星和木星都像乐于助人的亲戚一样希望看到你开心幸福。如果你还单身又没有约会对象，这轮满月将影响力强大，你将有邂逅新朋友的意外机会。如果你已经有对象了，你们可以一起共度更多美好时光，就像你们最初邂逅那样。同时，太阳，有了它你会闪耀；金星，有了它爱情会蔓延；水星，代表旅行和演讲的行星，都会出现在你的人际、事务、友谊和乐趣宫。这个月的前九天将是你参加朋友聚会的绝佳时机，因为金星将会出现在火象星座射手座，而射手座跟你的气象星座元素是相安无事的。今年，假日简直是为你而存在的啊，亲爱的水瓶座。',
+        shuangyu_quanj: '愿景将会转变为现实。你正准备进入到你职业生涯的重要阶段。你可能现在已经意识到了，或者稍后就知道。任务主导者之星土星，正要在12月23日进入到你的第十荣誉、奖赏、成就和名誉宫，并停留将近两年半。明年，2015年6月14日土星将逆行回天蝎座并待到2015年9月17日。而这也会让你暂时从所有的事业教导中解脱出来。但是一旦土星在9月17日重新回到射手座，土星将会待到2017年12月。上次这个行星出现在你的事业宫的时候还是1985年到1988年，而且那时候你应该也小有成就。土星将会向你显示如何展现权威性，这项实践能帮助你将愿景转变为现实。从12月4日起，火星将会在水瓶座，所以你将会为下个月完善你的策略，当火星进驻双鱼座时的重大推动做准备。12月6日的满月将会把焦点放在房屋上。你可能在周末娱乐娱乐，或者你在公司事务出现之前做必要的房屋修理。如果你打算煮东西吃，这个周末正适合叫几个帮手来擦洗银质餐具，或者确保你的日用织物拿得出手。满月带来许多能量，所以你会在瞬间搞定一切。12月21日新月日之后生活会发生戏剧性转变，那天至少五大天体会挤满你的乐趣、人际、聚会、事务和友谊宫。多年以来你都没有看到如此强大的场面，所以计划出去社交，在聚会上和朋友聊聊，喝喝酒，吃吃饭或者享受其他的消遣方式。你的有些朋友比较有权有势，这是通过出现的几大行星中的冥王星显示的，而且你会在社交的时候获得关于某项任务或者岗位的关键信息。所有五大天体都会在摩羯座，这个土象星座与你的水象星座完美融合。一直以来你都勤奋努力地工作，所以这个月，宇宙将会让你好好休息一下，从而让你在十二月的最后几天里好好放松。看来你可能会被邀请到某个新年夜聚会哦，如果这样的话，一定要安排时间去啊。有了月亮在和谐的金牛座，你肯定会享受到很多乐趣的，甚至会享受到豪华套餐哦，有精美的食物、花朵、餐具、音乐和有趣的人群相伴左右。'
+    };
+    var xzName = {
+        baiyang_quanj: '白羊座（3月21日-4月19日）',
+        jinniu_quanj: '金牛座（4月20日-5月20日）',
+        shuangzi_quanj: '双子座（5月21日-6月21日）',
+        juxie_quanj: '巨蟹座（6月22日-7月22日）',
+        shizi_quanj: '狮子座（7月23日-8月22日）',
+        chunv_quanj: '处女座（8月23日-9月22日）',
+        tianping_quanj: '天秤座( 9月23日-10月22日)',
+        tianxie_quanj: '天蝎座（10月23日至11月21日）',
+        sheshou_quanj: '射手座（11月22日-12月21日）',
+        mojie_quanj: '摩羯座（12月22日－1月19日）',
+        shuiping_quanj: '水瓶座（1月20日－2月18日）',
+        shuangyu_quanj: '双鱼座（2月19日－3月20日）'
+    };
+    function viewImg(i) {
+//        console.log(i);
+        var index = xzArr.indexOf(i);
+        $('#containerPano').animate({height: '1024px', width: '768px',opacity:1}, 0,function(){
+            $('#containerPano').show();
+//            $('#upframe').show();
+//            $('#downframe').show();
+            $('#xz-name').show().attr('class',xzArr[index]);
+            $('#yugaotext').fadeIn().text(text[xzArr[index]]);
+            //$('.label').attr('id', i).attr('src','img/'+i+'.png');
+            $('#xzlabel li.active').removeClass('active');
+
+            $('#xzlabel li[class='+xzArr[index]+']').addClass('active');
+            document.getElementById("xingpan").style.webkitTransform = "rotate(" + angArr[index] + "deg)";
+        });
+
+//            document.getElementById('zhuanpan').style.display='block';
+//            document.getElementById('zhuanpan').style.height='100%';
+
+        // document.getElementById("bg2").style.webkitTransform="rotate("+angArr[index]+"deg)";
+        //  document.getElementById('curr').src=xzArr[index] +'.png';
+        // document.getElementById('curr').title=xzArr[index];
+
+
+    }
+    document.addEventListener('touchmove',function(e){
+        e.preventDefault();
+    })
+    //全景图JS结束
+            $(document).ready(function(){
+                //page_2按钮
+//                var shining = setInterval(function(){
+//                    $(".btn_light1").toggle();
+//                    $(".btn_light2").toggle()
+//                },2000);
+
+                //预加载图片
+                var imgTotal = [
+                    "img/mojie.png", "img/shuiping.png", "img/shuangyu.png","img/chunv.png","img/tiancheng.png","img/tianxie.png","img/sheshou.png","img/jinniu.png",
+                    "img/shuangzi.png", "img/juxie.png", "img/shizi.png", "img/baiyang.png"
+                ];
+                $.preloadImages = function() {
+                    for(var i = 0; i < imgTotal.length; i++) {
+                        $("<img />").attr('src', imgTotal[i]);
+                    }
+                };
+                $.preloadImages();
+
+                $('#back').on('touchend',function(){
+//                    clearInterval(shining);
+                });
+
+                //出现全景图
+//                $('.forecast').on('touchend',function() {
+////                    $('#page_4').show().animate({top:'0'},1000);
+////                    clearInterval(shining);
+//                    if($('#page_2').is(':visible')){
+//                       $('#page_4').show();
+//                    }
+//                    var xzas=[
+//                        '<a class="da shuangyu" href="#"></a>',
+//                        '<a class="da baiyang" href="#"></a>',
+//                        '<a class="da jinniu" href="#"></a>',
+//                        '<a class="da shuangzi" href="#"></a>',
+//                        '<a class="da juxie" href="#"></a>',
+//                        '<a class="da shizi" href="#"></a>',
+//                        '<a class="da chunv" href="#"></a>',
+//                        '<a class="da tianping" href="#"></a>',
+//                        '<a class="da tianxie" href="#"></a>',
+//                        '<a class="da sheshou" href="#"></a>',
+//                        '<a class="da mojie" href="#"></a>',
+//                        '<a class="da shuiping" href="#"></a>'
+//                    ];
+////                    $('#Stage_plants').append("<div class='dotEleventh'></div><div class='dotEleventh'></div><div class='dotTwelve'></div><div class='dotTwelve'></div><div class='dotThirteen'></div><div class='dotThirteen'></div><div class='dotjn'></div><div class='dotjn'></div><div class='dotshuangzi'></div><div class='dotshuangzi'></div><div class='dotjx'></div><div class='dotjx'></div><div class='dotTx'></div><div class='dotTx'></div><div class='dotChn'></div><div class='dotChn'></div><div class='dotTc'></div><div class='dotTc'></div><div class='dotSs'></div><div class='dotSs'></div><div class='dotSp'></div><div class='dotSp'></div><div class='dotSy'></div><div class='dotSy'></div> ");
+//                    $('#Stage_plants').append(xzas.join(''));
+//                    $('#Stage_plants').on('touchend','a',function(){
+////                        console.log(this);
+//                        viewImg($(this).attr('class').split(' ')[1]+'_quanj');
+//                    });
+//                });
+
+                //出现第三屏
+//                $('.calendar').on('touchend',function(){
+////                    clearInterval(shining);
+//                    $('#page_3').show();
+//                        $('#container').show();
+//                        $('.card_a').css('display','block');
+//                        $('.card_b').css('display','block');
+//                        $('.card_c').css('display','block');
+//                        $('.card_d').css('display','block');
+//                        $('.card_e').css('display','block');
+//                        $('.card_f').css('display','inline-block');
+//                        $('.card_g').css('display','block');
+//                        $('.card_h').css('display','block');
+//                        $('.card_i').css('display','block');
+//                        $('.card_j').css('display','block');
+//                        $('.card_k').css('display','block');
+//                        $('.card_l').css('display','block');
+//                });
+
+//                $('#close').on('touchend',function(){
+////                    setInterval(function(){
+////                        $(".btn_light1").toggle();
+////                        $(".btn_light2").toggle()
+////                    },1500);
+//                        $('#page_3').hide();
+//                        $('.card_a').css('display','none');
+//                        $('.card_b').css('display','none');
+//                        $('.card_c').css('display','none');
+//                        $('.card_d').css('display','none');
+//                        $('.card_e').css('display','none');
+//                        $('.card_f').css('display','none');
+//                        $('.card_g').css('display','none');
+//                        $('.card_h').css('display','none');
+//                        $('.card_i').css('display','none');
+//                        $('.card_j').css('display','none');
+//                        $('.card_k').css('display','none');
+//                        $('.card_l').css('display','none');
+//                        $('#container').css('-webkit-transform','translateZ(0)');
+//
+//                });
+
+
+                //立体旋转效果
+                var j= 0,z= 0,d= 0,m=0,startX,startY,moveX,moveY;
+                setTimeout(function rotate(){
+                    $("#page_3").get(0).addEventListener("touchstart",function(event){
+                        event.preventDefault();
+                        startX = event.targetTouches[0].pageX;
+                        startY = event.targetTouches[0].pageY;
+                        j = parseFloat($('#container').attr("style").split(':')[1].split('(')[1]);
+
+                    },false);
+                    $("#page_3").get(0).addEventListener("touchmove",function(event){
+                    var ang;
+                        event.preventDefault();
+                        moveX = event.changedTouches[0].pageX;
+                        moveY = event.changedTouches[0].pageY;
+
+
+                        var x = (startX - moveX) * (startX - moveX) + (startY - moveY) * (startY - moveY);
+                        var y = Math.sqrt(x);
+                        z =  (moveX-startX>0?1:-1)*y/0.567;
+//                        console.log(Math.abs(z));
+//                        if(Math.abs(z)>=90){
+//                            $('#container').css('-webkit-transform','rotateY(45deg)');
+//
+//                        }
+//                        if(j+z>=90){
+//                            ang=90;
+//                        }else if(j+z<=-90){
+//                            ang=-90;
+//                        }else{
+                            ang=j+z;
+//                        }
+                        $('#container').css('-webkit-transform','rotateY('+ang/2+'deg)');
+
+                        //beiyong
+//                        if( ang>90 || ang<-90) {
+//                            var xishu = Math.round(ang / 360);
+//                            console.log(xishu);
+//                            document.getElementById('shuangzi_title').style.webkitTransform = "rotateY(" + 180 * xishu + "deg)";
+//                        }else{
+//                            document.getElementById('shuangzi_title').style.webkitTransform="rotateY(0)";
+//                        }
+
+                    },false);
+//                    $("#page_3").get(0).addEventListener("touchend",function(event){
+//                        endX = event.changedTouches[0].pageX;
+//                        endY = event.changedTouches[0].pageY;
+                        //                        console.log(event);
+//                        if(event.target.tagName!=='IMG'){
+//                            $('#container').animate({textIndent:0},{step:function(now,fx){
+////                            console.log(now,fx);
+//                                $('#container').css({webkitTransform:'rotateY('+((d++)j+z)+'deg)'});
+//                            }},'linear');console.log(d++);
+//                        }
+
+//                    },false);
+                    //十二星座页面
+                    $('body').on("touchend",'a',function(event){
+//                        var endCardiX= e.originEvent.changedTouches[0].pageX;
+                            var endX = event.originalEvent.changedTouches[0].pageX;
+                            var endY = event.originalEvent.changedTouches[0].pageY;
+                            var ii = Math.abs(endX - startX);
+                            var iii = Math.abs(endY - startY);
+                            if (ii == 0) {
+                                if (iii == 0) {
+                                    $('#container').css('-webkit-transform', 'translateZ(-500px)');
+                                    $('#tongyong').show();
+                                    $('#close_sz').on('touchend', function () {
+                                        $('#tongyong').hide();
+                                        $('#container').css('-webkit-transform', 'translateZ(0)');
+                                    });
+                                }
+                            }
+
+                        });
+
+                    $('#container')[0].addEventListener("touchend", function(event){
+                        var aaa = event.target.src.split('/');
+                        var name = aaa[aaa.length-1].split('.')[0];
+//                        console.log(name);
+                        var endX = event.changedTouches[0].pageX;
+                        var endY = event.changedTouches[0].pageY;
+                        var ii = Math.abs(endX - startX);
+                        var iii = Math.abs(endY - startY);
+                        if(ii == 0) {
+                            if (iii == 0) {
+//                                if(event.target.nodeName === 'IMG') {
+                                    $('#container').css('-webkit-transform', 'translateZ(-500px)');
+                                    $('#xz_page').attr('src', 'img/' + name + '.jpg');
+                                    $('#detail_page').show();
+                                    $('#home').hide();
+                                    $('#close_page').on('touchend', function () {
+                                        $('#detail_page').hide();
+                                        $('#home').show();
+                                        $('#container').css('-webkit-transform', 'translateZ(0)');
+                                    });
+//                                }
+                            }
+                        }
+
+                    });
+
+                },5000);
+
+
+
+//                document.getElementById('containerPano').addEventListener('touchstart', function (e) {
+////                    console.log(e);
+////                    console.log($('#yugaotext').scrollTop);
+//                    var touch = e.touches[0];zhuan=true;
+//                    if($(e.target).is('#yugaotext') || $(e.target).is('#ssText')){
+//                        zhuan=false;
+//                    }
+//
+//                    startX = touch.pageX;
+//                    initAngle = parseInt(document.getElementById("xingpan").style.webkitTransform.replace('rotate(', ''), 10);
+//                });
+//                document.getElementById('containerPano').addEventListener('touchmove', function (e) {
+//                    e.preventDefault();
+//                    var moveX, touch = e.touches[0], angle;moveX = touch.pageX;
+//                    if(zhuan){
+//
+//
+//                        console.log(initAngle);
+//                        angle = initAngle + ( startX- moveX) / 20;
+//                        if (angle < -40) {
+//                            angle = -39;
+//                        } else if (angle > 48) {
+//                            angle = 31;
+//                        }
+//
+//                        document.getElementById("xingpan").style.webkitTransform = "rotate(" + angle + "deg)";
+//                    }
+//                    if($(e.target).is('#yugaotext')){
+//                        document.getElementById('yugaotext').scrollTop = document.getElementById('yugaotext').scrollTop+(moveX-startX)/24;
+//                    }else if($(e.target).is('#ssText')){
+//                        document.getElementById('ssText').scrollTop = document.getElementById('ssText').scrollTop+(moveX-startX)/24;
+//                    }
+//                });
+//                document.getElementById('containerPano').addEventListener('touchend', function (e) {
+//                    if(zhuan){
+//                        if (e.changedTouches[0].pageX !== startX) {
+////                var index = Math.floor(Math.abs(-24.5 - parseInt(document.getElementById("bg2").style.webkitTransform.replace('rotate(', ''), 10)) / 5);
+////                document.getElementById("xingpan").style.webkitTransform = "rotate(" + angArr[index] + "deg)";
+////                document.getElementById('curr').src = xzArr[index] + '.png';
+////                document.getElementById('curr').title = xzArr[index];
+//                            //$('#xz-name').show().text(xzName[xzArr[index]]);
+//                            // $('#yugaotext').fadeIn().text(text[xzArr[index]]);
+//                            var angle=parseInt(document.getElementById("xingpan").style.webkitTransform.replace('rotate(', ''), 10), i,l;
+//                            console.log(angle);
+//                            for(i=0,l=angArr.length;i<l;i+=1){
+//                                if(Math.abs(angle-angArr[i])<=4){
+//                                    angle=angArr[i];
+//                                    $('#xzlabel li.active').removeClass('active');
+//                                    $('#xzlabel li[class*='+xzArr[i]+']').addClass('active');
+//                                    break;
+//                                }
+//                            }
+//
+//                            document.getElementById("xingpan").style.webkitTransform = "rotate(" + angle + "deg)";
+//                           // $('.label').attr('id', xzArr[i]).attr('src','img/'+xzArr[i]+'.png');
+//
+//                        }
+//                        zhuan = false;
+//                    }
+//
+//                    if($(e.target).is('#xzlabel li.active')){
+//                        $('#shangsheng div').text(text[e.target.id]);
+//                        $('#shangsheng').show();
+//                        $('#ssname').text(xzName[e.target.id]).show();
+//                        $('#bg2').hide();
+//                        $('#xzlabel').hide();
+//                    }
+//
+//                });
+//                $('#curr').on('click', function () {
+//                    $('#ssname').show().text(xzName[this.title]);
+//                    $('#shangsheng').fadeIn().text(text[this.title]);
+//
+//                });
+//
+//
+//                $('#close_quanj').on('touchend',function(){
+////                    setInterval(function(){
+////                        $(".btn_light1").toggle();
+////                        $(".btn_light2").toggle()
+////                    },1500);
+//                    document.getElementById('yugaotext').scrollTop = 0 ;
+//                    document.getElementById('ssText').scrollTop = 0 ;
+//                    if($('#shangsheng').is(':visible')){
+//                        $("#shangsheng").hide();
+//                        $("#ssname").hide();
+//                        $('#xzlabel').show();
+//                    }else if($('#xzlabel').is(':visible')){
+//                        $('#containerPano').css({height: '0', width: '0',opacity:0}).hide();
+//                        $('#upframe').hide();
+//                        $('#downframe').hide();
+//                    }else{
+//                        $('#page_4').hide();
+//                    }
+//                });
+//              //全景图结束
+            });
+
+    $('#home').on('touchend',function(){
+        window.location.href = 'navto://Horoscope_201501';
+    });
+        </script>
+</body>
+</html>
